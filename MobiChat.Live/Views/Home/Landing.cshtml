@@ -1,0 +1,54 @@
+﻿@{ Layout = "~/Views/_Layout/_Layout.cshtml"; }
+<link href="~/Content/Notifications.css" rel="stylesheet" />
+
+<div id="configuration">
+
+</div>
+
+<div id="content">
+
+  @*<div class="notification">
+    <div class="notification_wrap">
+      <div class="notification_class">CLICK</div>
+      <div class="notification_pxid">13216546</div>
+      <div class="notification_data">User clicked on this and that</div>
+      <div class="notification_time">13216546</div>
+    </div>
+    <div style="clear:both"></div>
+  </div>*@
+
+</div>
+
+<script type="text/javascript">
+  $(function () {
+    var chat = $.connection.communicationHub;
+
+    chat.client.update = function (data)
+    {
+      var html = '<div class="notification notification_' + data._class + '" id="' + ID('ntf') + '">' +
+          '<div class="notification_wrap">' +
+            '<div class="notification_class">' + data._class + '</div>' +
+            '<div class="notification_pxid">' + data._pxid + '</div>' +
+            '<div class="notification_data">' + data._data + '</div>' +
+            '<div class="notification_time">' + data._time + '</div>' +
+          '</div>' +
+          '<div style="clear:both"></div>' +
+        '</div>';
+      $("#content").prepend(html);
+    };
+
+    $.connection.hub.start().done(function () {
+      console.log('connection started');
+    });
+
+  });
+
+  function ID(prefix)
+  {
+    if (typeof prefix == undefined) prefix = ""; else prefix += "_";
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    for (var i = 0; i < 15; i++) text += possible.charAt(Math.floor(Math.random() * possible.length));
+    return prefix + text;
+  }
+</script>

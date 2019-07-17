@@ -1,0 +1,24 @@
+﻿@model List<MobiChat.Live.Models.MessageDataTable>
+
+@foreach (MobiChat.Live.Models.MessageDataTable entry in Model)
+{
+
+  <div class="message @entry.MessageClass"
+       messageid="@entry.MessageID"
+       messageguid="@entry.MessageGuid"
+       pxid="@entry.TrackingID"
+       ondblclick="_manager.doubleClick(this);">
+    <div class="country_flag" style="background-image:url('@string.Format("../Images/_Flags/{0}.png", entry.Country)');"></div>
+    <div class="direction @entry.DirectionClass">@entry.Direction</div>
+    <div class="service">@entry.Service</div>
+    <div class="operator">@entry.MessageOperatorName</div>
+    <div class="message_text">@entry.Text</div>
+    <div class="from">@entry.Msisdn</div>
+    <div class="status status_@entry.Status">@entry.Status</div>
+    <div class="type type_@entry.Type">@entry.Type</div>
+    <div class="pxid">@entry.TrackingID</div>
+    <div class="created">@entry.Created</div>
+    <div style="clear:both"></div>
+  </div>
+
+}

@@ -1,0 +1,34 @@
+﻿body, html {
+  font-family: 'Roboto', sans-serif;
+  margin:0px;
+}
+
+.notification{
+    background-color: #d2d2d2;
+    font-size: 14px;
+}
+.notification_wrap {
+    display:block;
+    clear:both;
+}
+.notification_class {
+    float:left;
+    width: 100px;
+    text-align:center;
+}
+.notification_pxid {
+    float:left;
+    width: 100px;
+    text-align:center;
+}
+.notification_data {
+    float:left;
+}
+.notification_time {
+    float:right;
+    width: 250px;
+    text-align:center;
+}
+
+
+.notification_CLICK{background-color: #b9ffcb;}

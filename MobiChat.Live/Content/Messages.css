@@ -1,0 +1,70 @@
+﻿body, html{background: #C3C3C3; }
+
+#contentHeader{ position:fixed; z-index:1; width:100%; }
+#contenFooter { position:fixed; z-index:1; width:100%; bottom:0px; } #contenFooter > .message{ opacity:1!important; }
+#contentHeader .message{ opacity:1; }
+
+#messageContent{position:absolute;top: 20px;width:100%;} 
+
+.message:hover{ opacity:1; }
+.message {
+  font-size:13px;
+  background-color: #fdf4c9;
+  border: 1px solid rgba(255, 255, 45, 0);
+  cursor:hand;
+  cursor:pointer;
+  opacity:.8;
+}
+
+  .message .country_flag {
+    float:left; width:15px; height:15px; 
+    background-size:contain; background-repeat:no-repeat; background-position:center;
+  }
+  .message .direction {
+    float:left;
+    width:20px;
+    height:15px;
+    text-align:center;
+  }
+  .message .service {
+    float:left; width:150px; height:15px; text-align:center;
+  }
+  .message .operator {
+    float:left; width:150px; text-align:center; min-width:150px; min-height:1px;
+  }
+  .message .message_text {
+    background-color:rgba(255,255,255,.5);
+    float:left; width:850px; overflow:hidden; text-align:center; height:15px;
+  }
+  .message .from {
+    float:left; width:150px; text-align:center; min-height:1px;
+  }
+  .message .status {
+    float:left;
+    width:100px;
+    color: #ffffff;
+    font-size:11px;
+    padding:1px;
+    text-align:center;
+    opacity:.5;
+  }
+  .message .type { float:left; width:150px; text-align:center; }
+  .message .pxid { float:left; width:50px; text-align:center; min-height:1px; }
+  .message .created {
+    float:right; text-align:center; width:150px;
+  }
+  
+  /* MESSAGE DIRECTION */
+  .message_in{background: linear-gradient(to left, #e5ffed, #bfe2ae);}
+  .message_out{background: linear-gradient(to right, #eeecdb, #e4f9c3);}
+
+  /* STATUSES */
+  .message .status_SENT {background-color: #2b59b9;}
+  .message .status_DELIVERED {background-color: #00ab00;}
+  .message .status_NOT_DELIVERED {background-color: maroon;}
+  .message .status_RECEIVED {background-color: #002d00;}
+  .message .status_DESCRIPTION { color:black; opacity:1; font-size:14; padding:0; }
+
+  /* DIRECTION */
+  .direction_in{ color: #026f02; }
+  .direction_out{color: #ff6000;}   

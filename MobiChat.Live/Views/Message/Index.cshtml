@@ -1,0 +1,51 @@
+﻿@{ 
+  Layout = "~/Views/_Layout/_Layout.cshtml"; 
+}
+<link href="~/Content/Messages.css" rel="stylesheet" />
+<script src="~/Scripts/MessageManager.js"></script>
+<script src="~/Scripts/ConfigurationManager.js"></script>
+
+@{ Html.RenderPartial("~/Views/Message/_Configuration.cshtml"); }
+
+<div id="contentHeader">
+  <div class="message">
+    <div class="country_flag"></div>
+    <div class="direction direction_in"></div>
+    <div class="service">Service name</div>
+    <div class="operator">Mobile operator</div>
+    <div class="message_text">Text</div>
+    <div class="from">From</div>
+    <div class="status status_DESCRIPTION">Status</div>
+    <div class="type">Type</div>
+    <div class="pxid">Pxid</div>
+    <div class="created">Created</div>
+    <div style="clear:both"></div>
+  </div> 
+</div>
+
+
+<div id="messageContent"></div>
+
+
+<div id="contenFooter">
+  <div class="message">
+    <div class="country_flag"></div>
+    <div class="direction">Number</div>
+    <div class="service" id="database_count">13</div>
+    <div class="operator"></div>
+    <div class="message_text"></div>
+    <div class="from"></div>
+    <div class="status status_DESCRIPTION"></div>
+    <div class="type">Time</div>
+    <div class="pxid" id="database_time"></div>
+    <div class="created"></div>
+    <div style="clear:both"></div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  var _manager = null;
+  $(document).ready(function () {
+    _manager = new MessageManager();
+  });
+</script>

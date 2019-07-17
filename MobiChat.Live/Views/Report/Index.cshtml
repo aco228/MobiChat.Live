@@ -1,0 +1,40 @@
+﻿@model MobiChat.Live.Models.ReportModel
+@{
+  Layout = "~/Views/_Layout/_Database.cshtml";
+}
+@Scripts.Render("~/Highlight/js")
+@Styles.Render("~/Highlight/css")
+<link href="~/content/report.css" rel="stylesheet" />
+<script src="~/scripts/reportmanager.js"></script>
+
+<style>
+  body { background-color: #505050; }
+</style>
+
+<div class="block block_closed" id="informations">
+  <div class="block_header openclose">
+    <div class="block_loadTime" id="informations_loadingTime"> </div>
+    Informations
+    <div class="block_loading" id="informations_loading"></div>
+  </div>
+  <div class="block_body" id="informations_body"></div>
+</div>
+
+<div class="block block_closed" id="paywall2">
+  <div class="block_header openclose">
+    <div class="block_loadTime" id="paywall2_loadingTime"> </div>
+    Paywall reports (fast)
+    <div class="block_loading" id="paywall2_loading"></div>
+  </div>
+  <div class="block_body" id="paywall2_body"> </div>
+</div>
+
+
+<script>
+
+  function Initiate()
+  {
+
+  };
+  
+</script>

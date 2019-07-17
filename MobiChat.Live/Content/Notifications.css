@@ -1,0 +1,30 @@
+﻿.notification{
+    background-color: #d2d2d2;
+    font-size: 13px;
+}
+.notification_wrap {
+    display:block;
+    clear:both;
+}
+.notification_class {
+    float:left;
+    width: 100px;
+    text-align:center;
+}
+.notification_pxid {
+    float:left;
+    width: 100px; min-height:1px;
+    text-align:center;
+}
+.notification_data {
+    float:left;
+}
+.notification_time {
+    float:right;
+    width: 250px;
+    text-align:center;
+}
+
+
+.notification_VISIT{background-color: #c5c5c5;}
+.notification_CLICK{background-color: #d7ead3;}
